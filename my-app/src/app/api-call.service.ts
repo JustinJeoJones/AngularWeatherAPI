@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiCallService {
   private REST_API_SERVER = "https://api.openweathermap.org/data/2.5/weather?q=";
   private ID = "&appid=f13d9a4c716f47f7fa06bc732c55e049";
+  private unit = "&units=imperial";
   private WeatherData = [];
 
   public displayCity = "";
@@ -19,7 +20,7 @@ export class ApiCallService {
   constructor(private httpClient: HttpClient) { }
 
   public setWeather(city){
-    this.httpClient.get(this.REST_API_SERVER + city + this.ID).subscribe((data: any[])=>{
+    this.httpClient.get(this.REST_API_SERVER + city + this.unit + this.ID).subscribe((data: any[])=>{
       console.log(data);
       this.displayCity = data['name'];
       this.displayDescription = data['weather'][0]['description'];

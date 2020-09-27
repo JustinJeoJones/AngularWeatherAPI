@@ -7,7 +7,7 @@ import { ApiCallService } from '../api-call.service';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  constructor(private apiCallService: ApiCallService) { }
+  constructor(public apiCallService: ApiCallService) { }
   city = "H";
   ngOnInit(){
     
@@ -19,3 +19,4 @@ export class ResultComponent implements OnInit {
 }
 
 
+ 
