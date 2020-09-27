@@ -10,7 +10,7 @@ import { ApiCallService } from '../api-call.service';
 export class FormComponent implements OnInit {
 
   constructor(private apiCallService: ApiCallService) { }
-  city = "";
+  city = "Holland";
   
   ngOnInit(): void {
   }

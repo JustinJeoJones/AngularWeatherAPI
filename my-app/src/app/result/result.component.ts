@@ -7,13 +7,15 @@ import { ApiCallService } from '../api-call.service';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  constructor() { }
-
+  constructor(private apiCallService: ApiCallService) { }
+  city = "H";
   ngOnInit(){
     
   }
   getWeather(){
-    
+    this.apiCallService.getWeather();
   }
   
 }
+
+
